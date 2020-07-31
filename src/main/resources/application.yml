@@ -4,7 +4,9 @@ graphql:
     servlet:
         mapping: /graphql
         enabled: true
-        corsEnabled: false
+        corsEnabled: true
+        cors:
+            allowed-origins: http://localhost:3000
         # if you want to @ExceptionHandler annotation for custom GraphQLErrors
         exception-handlers-enabled: true
         contextSetting: PER_REQUEST_WITH_INSTRUMENTATION

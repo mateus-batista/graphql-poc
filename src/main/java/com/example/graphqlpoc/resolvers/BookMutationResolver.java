@@ -9,7 +9,7 @@ import com.example.graphqlpoc.repository.Repository;
 import graphql.kickstart.tools.GraphQLMutationResolver;
 
 @Component
-public class MutationResolver implements GraphQLMutationResolver {
+public class BookMutationResolver implements GraphQLMutationResolver {
 	public Book createBook(BookInput bookInput) {
 		return Repository.createBook(bookInput);
 	}

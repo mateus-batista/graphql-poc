@@ -10,7 +10,7 @@ import com.example.graphqlpoc.repository.Repository;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 
 @Component
-public class QueryResolver implements GraphQLQueryResolver {
+public class BookQueryResolver implements GraphQLQueryResolver {
 
 	public List<Book> books() {
 		return Repository.findAllBooks();
