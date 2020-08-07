@@ -12,11 +12,13 @@ import graphql.kickstart.tools.GraphQLQueryResolver;
 @Component
 public class BookQueryResolver implements GraphQLQueryResolver {
 
-	public List<Book> books() {
+	public List<Book> books() throws InterruptedException {
+		Thread.sleep(5000L);
 		return Repository.findAllBooks();
 	}
 
-	public Book book(Integer bookId) {
+	public Book book(Integer bookId) throws InterruptedException {
+		Thread.sleep(5000L);
 		return Repository.findOneBook(bookId);
 	}
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { gql, ApolloQueryResult } from "@apollo/client";
-import { Book, BookResult } from "../types/Book";
+import { Book, BooksResult } from "../types/Book";
 import { BookView } from "./BookView";
 import { AuthorView } from "./AuthorView";
 import { client } from "../config/client";
@@ -24,7 +24,7 @@ export function SimpleWay(props: any) {
           }
         `,
       })
-      .then((result: ApolloQueryResult<BookResult>) => {
+      .then((result: ApolloQueryResult<BooksResult>) => {
         console.log(result);
         setBooks(result.data?.books);
       });
